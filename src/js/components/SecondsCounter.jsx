@@ -108,8 +108,8 @@ const SecondsCounter = () => {
                 </div>
             </div>
 
-            {!isRunning && <button className='btn btn-accept btn-lg' onClick={startTimer}><FontAwesomeIcon icon={faPlay} /></button>}
-            {isRunning && <button className='btn btn-warning btn-lg' onClick={pauseTimer}><FontAwesomeIcon icon={faPause} /></button>}
+            {!isRunning && <button onClick={startTimer}><FontAwesomeIcon icon={faPlay} /></button>}
+            {isRunning && <button onClick={pauseTimer}><FontAwesomeIcon icon={faPause} /></button>}
             <button className='btn btn-danger btn-lg' onClick={stopTimer}><FontAwesomeIcon icon={faStop} /></button>
         </>
     )
