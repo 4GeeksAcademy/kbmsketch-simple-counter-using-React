@@ -1,16 +1,16 @@
 import React from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-import Counter from "./Counter";
 
-//create your first component
+
+import SecondsCounter from "./SecondsCounter";
+
+
 const Home = () => {
 	return (
 		<div >
-            
 
-			<Counter/>
+
+			<SecondsCounter />
 		</div>
 	);
 };
