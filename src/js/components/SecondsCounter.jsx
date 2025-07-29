@@ -62,12 +62,17 @@ const SecondsCounter = () => {
         setMilliseconds(e.target.value)
     }
     const startTimer = () => {
-        if (hours !== 0 || minutes !== 0 || seconds !== 0 || milliseconds !== 0) {
-            setIsRunning(true);
+        if (hours === 0 && minutes === 0 && seconds === 0 && milliseconds === 0) {
+            const confirmStart = window.confirm(
+                "Time is set to 0. Do you want to start anyway?\nYou can also set a custom time."
+            );
+            if (confirmStart) {
+                setIsRunning(true);
+            }
         } else {
-            window.alert('Add Time.')
+            setIsRunning(true);
         }
-    }
+    };
 
     const pauseTimer = () => {
         setIsRunning(false);
